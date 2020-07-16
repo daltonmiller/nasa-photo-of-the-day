@@ -1,15 +1,40 @@
 import React from "react";
 import "./App.css";
+import CardMaker from "./CardMaker";
+import styled, { css } from 'styled-components'
+
 
 function App() {
+ 
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <Nav>
+       <div><a href="">boom</a></div>
+       <div><a href="">boom</a></div>
+       <div><a href="">boom</a></div>
+       <div><a href="">boom</a></div>
+      </Nav>
+      <CardMaker />
     </div>
   );
 }
+const Nav  = styled.nav`
+display: inline-block;
+color: green;
+display: flex;
+justify-content: space-between;
+border: 5px solid black;
+
+
+
+
+
+${props =>
+  props.primary &&
+  css`
+    background: palevioletred;
+    color: red;
+  `};
+`
 
 export default App;
